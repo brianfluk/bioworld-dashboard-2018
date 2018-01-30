@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include defaultimports %>
+  </head>
+  <body>
+    
+    <%- include nav %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Welcome to Your BioWorld Dashboard!</h1>
+          <p>This is your personal learner dashboard.<br><br>
+             We will be presenting you with some information about your learning experience while working through the BioWorld Cases.<br><br>
+             Please visit the dashboard after each case to view your updated learner profile.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <canvas id="content"></canvas>
+        <%- include homegraphic.ejs %>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

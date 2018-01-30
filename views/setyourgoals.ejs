@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include defaultimports %>
+    <script src="/javascripts/set_your_goals.js"></script> 	
+  </head>
+  <body>
+    
+    <%- include nav %>
+
+    <div class="container-fluid">
+        <div class="row">
+              <div class="col-sm-12">
+                  <h1 class="page-header" >Set Your Goals</h1>
+                  <p>Setting goals can help with your performance.</p>
+    
+                  <div class="form-group">
+    
+                    <p style="font-weight: bold;">Select the top three goals you would like to focus on while working through the BioWorld cases:</p>
+                    <br/>
+                
+                    <div class="custom-controls-stacked">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="c1" 
+                            onclick="showQ(this);">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Correctly diagnose the case</span>
+                        </label>
+                        <div id="c1opt" style="display:none;" class="set_your_goals_opt">
+                            <p class="set_your_goals_question">What are some steps you would like to take to reach this goal?</p>
+                            <input type="text" id="c1text" class="form-control"/>
+                            <button type="submit" class="btn btn-primary">Submit response</button>
+                            <button type="button" id="c1help" onclick="showHelp(this)" class="btn btn-default">Help</button>
+                            <div id="c1helpTxt" style="display:none;">
+                                <p class="set_your_goals_help"> 
+                                <br>
+                                Suggestions: <br/>
+                                -	Take some more time to review the patient history (problem)<br>
+                                -	Order a wide selection of lab tests to narrow down the specific diagnosis<br>
+                                -	Examine the evidence again before I make the final diagnosis
+                                </p>
+                            </div>
+                        </div><br>
+    
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="c2" 
+                            onclick="showQ(this);">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Order an appropriate number of lab tests</span>
+                        </label>
+                        <div id="c2opt" style="display:none;" class="set_your_goals_opt">
+                            <p class="set_your_goals_question">What are some steps you would like to take to reach this goal?</p>
+                            <input type="text" id="c2text"  class="form-control"/>
+                            <button type="submit" class="btn btn-primary">Submit response</button>
+                            <button type="button" id="c2help" onclick="showHelp(this)" class="btn btn-default">Help</button>
+                            <div id="c2helpTxt" style="display:none;">
+                                <p class="set_your_goals_help"> 
+                                <br>Suggestions: <br/>
+                                -	Only order the tests that I consider to be useful for the diagnosis<br>
+                                -	Review the most probable hypothesis to identify which lab tests to select
+                                <br>
+                                </p>
+                            </div>
+                        </div><br>
+                        
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="c3" 
+                            onclick="showQ(this);">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Select an appropriate amount of evidence</span>
+                        </label>
+                        <div id="c3opt" style="display:none;" class="set_your_goals_opt">
+                            <p class="set_your_goals_question">What are some steps you would like to take to reach this goal?</p>
+                            <input type="text" id="c3text"  class="form-control"/>
+                            <button type="submit" class="btn btn-primary">Submit response</button>
+                              <button type="button" id="c3help" onclick="showHelp(this)" class="btn btn-default">Help</button>
+                              <div id="c3helpTxt" style="display:none;">
+                                  <p class="set_your_goals_help"> <br>Suggestions: <br/>
+                                -	Revise number of evidences selected after rating probable hypotheses<br>
+                                -	Select only differentiating pieces of evidences<br>
+                                -	Review the problem again<br>
+                                </p>
+                            </div>
+                        </div><br>
+                        
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="c4" 
+                            onclick="showQ(this);">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Spend an appropriate amount of time on the feedback provided after the case is done</span>
+                        </label>
+                        <div id="c4opt" style="display:none;" class="set_your_goals_opt">
+                            <p class="set_your_goals_question">What are some steps you would like to take to reach this goal?</p>
+                            <input type="text" id="c4text" class="form-control"/>
+                             <button type="submit" class="btn btn-primary">Submit response</button>
+                            <button type="button" id="c4help" onclick="showHelp(this)" class="btn btn-default">Help</button>
+                            <div id="c4helpTxt" style="display:none;">
+                                  <p class="set_your_goals_help"> <br>Suggestions: <br/>
+                                   -	Revise number of evidences selected after rating probable hypotheses<br>
+                                -	Select only differentiating pieces of evidences<br>
+                                -	Review the problem again<br>
+                                </p>
+                            </div>
+                        </div><br>
+                        
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="c5" 
+                            onclick="showQ(this);">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Ask for an appropriate number of consultations</span>
+                        </label>
+                        <div id="c5opt" style="display:none;" class="set_your_goals_opt">
+                             <p class="set_your_goals_question">What are some steps you would like to take to reach this goal?</p>
+                             <input type="text" id="c5text" class="form-control"/>
+                              <button type="submit" class="btn btn-primary">Submit response</button>
+                            <button type="button" id="c5help" onclick="showHelp(this)" class="btn btn-default">Help</button>
+                            <div id="c5helpTxt" style="display:none;">
+                                  <p class="set_your_goals_help"> <br>Suggestions: <br/>
+                                   - Seek help immediately when unsure about diagnosis decision<br><br>
+                                </p>
+                                  <br>
+                            </div>
+                        </div><br>
+                        
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="c6" 
+                            onclick="showQ(this);">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Visit the Library for more research about the case</span>
+                        </label>
+                        <div id="c6opt" style="display:none;" class="set_your_goals_opt">
+                            <p class="set_your_goals_question">What are some steps you would like to take to reach this goal?</p>
+                            <input type="text" id="c6text" class="form-control"/>
+                            <button type="submit" class="btn btn-primary">Submit response</button>
+                            <button type="button" id="c6help" onclick="showHelp(this)" class="btn btn-default">Help</button>
+                                <div id="c6helpTxt" style="display:none;">
+                                  <p class="set_your_goals_help"> <br>Suggestions: <br/>
+                                - Look up unfamiliar words for better contextual understanding<br>
+                                - Review similar cases to compare evidence required to make diagnosis<br>
+                                </p>
+                                </div>
+                        </div><br>
+                        
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="c7" 
+                            onclick="showQ(this);">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Generate more hypotheses</span>
+                        </label>
+                        <div id="c7opt" style="display:none;" class="set_your_goals_opt">
+                            <p class="set_your_goals_question">What are some steps you would like to take to reach this goal?</p>
+                            <input type="text" id="c7text" class="form-control"/>
+                            <button type="submit" class="btn btn-primary">Submit response</button>
+                            <button type="button" id="c7help" onclick="showHelp(this)" class="btn btn-default">Help</button>
+                            <div id="c7helpTxt" style="display:none;">
+                                  <p class="set_your_goals_help"> <br>Suggestions: <br/>
+                                   - Identify all possible hypotheses related to the selected evidences<br>
+                                - Rank order the selected hypotheses
+                                </p>
+                            </div>
+                        </div><br>
+                    </div>
+                    
+                
+                <br/><br/>
+                <div class="col-sm-8 text-center">
+                    <button type="submit" class="btn btn-primary">Submit goals and responses</button>
+                </div>					
+                <br><br><br><br><br><br><br><br><br>
+            </div>            
+          </div>
+        </div>	
+         
+          <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+    
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

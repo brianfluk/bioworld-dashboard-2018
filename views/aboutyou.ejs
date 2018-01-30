@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include defaultimports %>
+  </head>
+  <body>
+    
+
+    <%- include nav %>
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-lg-12">
+                  <h1 class="page-header">About You as a Learner</h1>
+                </div>
+        </div>
+        <p>Based on the questionnaire you filled out prior to starting any cases on BioWorld, it appears that your performance orientation is:</p>
+        
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <div id="learnergraph"></div>
+            </div>
+            <div class="col-lg-8">
+                <code>
+                    (Performance avoidance) <br>
+                    You tend to focus on avoiding poor performance. <br>
+                    Remember that you making mistakes can help you learn!
+                    </code> <br><br>
+                    <code>
+                    (Performance prove) <br>
+                    You tend to focus on proving performance based on tangible results. <br>
+                    (insert advice)
+                    </code><br><br>
+                    <code>
+                    (Mastery oriented)<br>
+                    You tend to focus on gaining skill and experience rather than pure results. <br>
+                    (insert advice)
+                </code><br><br>
+            </div>
+        <br><br>
+        </div>
+
+        Does this descriptive accurately describe your learning preference?
+        <br>
+        <select class="form-control">
+            <option>Not accurate at all</option>
+            <option>Somewhat accurate</option>
+            <option>Accurate</option>
+            <option>Very Accurate</option>
+        </select>
+        <br><br>
+
+        How do you think this will influence your decision of the goals you will set?
+        <br>
+        <select class="form-control">
+            <option>I will set goals that will help me to understand the information I'm not familiar with</option>
+            <option>I will set goals that help me to get the diagnosis correct</option>
+            <option>I will set goals that will help me to look smart</option>
+            <option>I will set goals that will help me to not be stuck on the diagnosis"</option>
+        </select>
+         <br><br>
+    
+        What steps will you take to achieve your goals?
+        <br>
+        <select class="form-control">
+            <option>I will choose tasks that I know are difficult, but will help me to learn</option>
+            <option>I will stop thinking about my diagnosis outcome and focus on understanding the material</option>
+            <option>I will monitor my own progress and try not to compare to others</option>
+        </select>
+        <br>
+        <!-- /.row -->
+        <br>
+        <div class="col-sm-8 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>		
+        
+        <%- include aboutyougraph.ejs %>
+        
+    </div>
+    <!-- /.container-fluid -->    
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

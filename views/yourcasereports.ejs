@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include defaultimports %>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  </head>
+  <body>
+    
+    <%- include nav %>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Your Case Reports</h1>
+                <p>Here, you can see the data collected from your cases.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Case 1: Susan</h1>
+                <div id="case1"></div>
+                <br>
+                <h1>Case 2: Cynthia</h1>
+                <div id="case2"></div>
+                <br>
+                <h1>Case 3: {Other Name}</h1>
+                <div id="case3"></div>
+                <br>
+                <%- include yourcasereport_charts.ejs %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="casereportpie"></div>
+                <!-- <%- include yourcasereport_pie.ejs %> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="/javascripts/draw.js" ></script> -->
+    
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
