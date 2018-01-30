@@ -16,7 +16,10 @@
     font-size: 14px;
     line-height: 1.7;
     color: gray;
-    background: #e8e8e8;
+    /* background: #e8e8e8; */
+    background: white;
+    background-image: url("/images/bg8.jpg");
+    
   }
   
   #page {
