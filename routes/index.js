@@ -20,6 +20,9 @@ router.get('/setyourgoals', function(req, res, next) {
 router.get('/yourcasereports', function(req, res, next) {
   res.render('yourcasereports', { title: 'Your Case Reports - Bioworld Dashboard' });
 });
+router.get('/reflection', function(req, res, next) {
+  res.render('reflection', { title: 'Reflection - Bioworld Dashboard' });
+});
 router.get('/compareyourcases', function(req, res, next) {
   res.render('compareyourcases', { title: 'Compare Your Case Reports - Bioworld Dashboard' });
 });
